@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.imgSize {
+  object-fit: cover;
+}
+
+.navlink,
+.productImg {
+  transition: all 0.2s ease;
+}
+.navlink {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.navlink:hover {
+  background: #fff;
+}
+.productImg:hover {
+  scale: 1.02;
+}
+.imgSize {
+  width: 100%;
+  height: 100vh;
+}
+.imgSize img {
+  object-fit: cover;
+}
+.zPoz {
+  z-index: 888;
+}
+.activeCl {
+  background: #fff;
+}
