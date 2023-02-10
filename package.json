@@ -8,8 +8,8 @@
     "dev": "vite  --port=3000",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@mui/icons-material": "^5.11.0",
