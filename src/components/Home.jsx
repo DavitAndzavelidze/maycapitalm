@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <span className="w-full h-full bg-[#333] opacity-40 absolute top-0 left-0 z-50"></span>
       <div className="bg-orange-300">
-        <nav className="absolute top-0 left-0 z-50 w-full bg-orange-400">
+        <nav className="absolute top-0 left-0 z-50 w-full bg-orange-400/[.8]">
           <ul className="flex justify-center items-center gap-[30px] cursor-pointer py-[20px] text-[20px]">
             <Link to="/">
               <li className="navlink activeCl">Home</li>
@@ -94,6 +94,11 @@ export default function Home() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <span className="absolute right-0 bottom-0">
+        <h4 className="text-[24px] text-[#fff] pr-[2rem] pb-[2rem]">
+          May Capital Makine
+        </h4>
+      </span>
     </>
   );
 }

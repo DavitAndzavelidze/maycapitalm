@@ -12,8 +12,13 @@
 }
 
 .navlink,
-.productImg {
+.productImg,
+.btn-fm {
   transition: all 0.2s ease;
+}
+.productImg {
+  width: 200px;
+  border-radius: 20px;
 }
 .navlink {
   padding: 10px 20px;
@@ -37,4 +42,8 @@
 }
 .activeCl {
   background: #fff;
+}
+.btn-fm:hover {
+  color: #fff;
+  background: orange;
 }

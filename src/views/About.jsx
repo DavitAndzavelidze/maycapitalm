@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <div className="bg-orange-300">
-        <nav className="absolute top-0 left-0 z-50 w-full bg-orange-400">
+        <nav className="absolute top-0 left-0 z-50 w-full bg-orange-400/[.8]">
           <ul className="flex justify-center items-center gap-[30px] cursor-pointer py-[20px] text-[20px]">
             <Link to="/">
               <li className="navlink">Home</li>
@@ -41,7 +41,7 @@ export default function About() {
             </p>
           </div>
           <div className="img-box">
-            <img src={AboutImg} alt="..." />
+            <img className="rounded-[10px]" src={AboutImg} alt="..." />
           </div>
         </div>
       </div>
