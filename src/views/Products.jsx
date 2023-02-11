@@ -33,11 +33,11 @@ export default function Products() {
           </ul>
         </nav>
       </div>
-      <div className="w-[1500px] flex flex-col mx-auto mt-[8rem] pl-[20px]">
+      <div className="max-w-[1500px] flex flex-col mx-auto mt-[8rem] pl-[20px]">
         <div className="text-[40px] self-center border-b-4 border-orange-400 mb-[6rem] cursor-default">
           Our Products
         </div>
-        <div className="flex">
+        <div className="flex justify-between">
           <ul className="text-[22px] cursor-default leading-[40px]">
             <li>REBAR</li>
             <li>WIRE ROD</li>
