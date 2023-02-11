@@ -94,8 +94,8 @@ export default function Home() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <span className="absolute right-0 bottom-0">
-        <h4 className="text-[24px] text-[#fff] pr-[2rem] pb-[2rem]">
+      <span className="absolute top-0 right-0 z-50">
+        <h4 className="text-[24px] text-[#fff] pr-[2rem] pt-[2rem] ">
           May Capital Makine
         </h4>
       </span>

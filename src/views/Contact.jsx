@@ -25,12 +25,23 @@ export default function Contact() {
         <div className="text-[40px] self-center border-b-4 border-orange-400 mb-[4rem] cursor-default">
           Contact
         </div>
-        <div className="flex justify-between w-[800px]">
-          <div className="contact-text">
-            <p className="text-[20px] w-[350px] leading-[34px]">
-              Address: ESENTEPE MAH. KORE ŞEHİTLERİ CAD. ISTANBLOOM NO:16/1 IC
-              KAPI NO: 54SISLI/ İSTANBUL/TURKEY
-            </p>
+        <div className="flex justify-between w-[900px]">
+          <div className="contact-text text-[20px] w-[350px] flex flex-col gap-[20px]">
+            <div>
+              <h3>Mobile</h3>
+              <p className="text-[18px]">+90 535 508 56 97</p>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p className="text-[18px]">info@maycapitalmakine.com</p>
+            </div>
+            <div>
+              <h3>Address</h3>
+              <p className="text-[18px]">
+                ESENTEPE MAH. KORE ŞEHİTLERİ CAD. ISTANBLOOM NO:16/1 IC KAPI NO:
+                54SISLI/ İSTANBUL/TURKEY
+              </p>
+            </div>
           </div>
           <div>
             <form>

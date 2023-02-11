@@ -14,7 +14,7 @@ import productImage12 from "../assets/pic-12.png";
 
 export default function Products() {
   return (
-    <>
+    <div className="horisontal-x-hidden">
       <div className="bg-orange-300">
         <nav className="absolute top-0 left-0 z-50 w-full bg-orange-400/[.8]">
           <ul className="flex justify-center items-center gap-[30px] cursor-pointer py-[20px] text-[20px]">
@@ -33,7 +33,7 @@ export default function Products() {
           </ul>
         </nav>
       </div>
-      <div className="w-[1700px] flex flex-col mx-auto mt-[8rem] pl-[20px]">
+      <div className="w-[1500px] flex flex-col mx-auto mt-[8rem] pl-[20px]">
         <div className="text-[40px] self-center border-b-4 border-orange-400 mb-[6rem] cursor-default">
           Our Products
         </div>
@@ -52,7 +52,7 @@ export default function Products() {
             <li>HOT DIPPED GALVANIZED COILS</li>
           </ul>
 
-          <div className="flex flex-wrap w-[1000px] justify-center mx-auto gap-[20px]">
+          <div className="flex flex-wrap w-[1000px] justify-center mx-auto gap-[20px] mb-[2rem]">
             <img className="productImg" src={productImage1} alt="..." />
             <img className="productImg" src={productImage2} alt="..." />
             <img className="productImg" src={productImage3} alt="..." />
@@ -68,6 +68,6 @@ export default function Products() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
