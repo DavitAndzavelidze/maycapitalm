@@ -76,7 +76,7 @@ export default function Contact() {
                 <div className="submit self-end">
                   <button
                     className="px-[40px] py-[10px] bg-orange-300 btn-fm"
-                    type="submit"
+                    type="button"
                   >
                     Send
                   </button>
