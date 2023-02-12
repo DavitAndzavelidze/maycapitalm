@@ -7,10 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 .imgSize {
   object-fit: cover;
 }
-
 .navlink,
 .productImg,
 .btn-fm {
@@ -19,6 +21,9 @@
 .productImg {
   width: 200px;
   border-radius: 20px;
+}
+.mobImg {
+  width: 100px;
 }
 .navlink {
   padding: 10px 20px;
