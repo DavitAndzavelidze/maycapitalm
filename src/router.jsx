@@ -9,7 +9,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar />,
-
     children: [
       {
         path: "/",
@@ -29,5 +28,9 @@ const router = createBrowserRouter([
       },
     ],
   },
+  // {
+  //   path: "*",
+  //   element: <Navbar />,
+  // },
 ]);
 export default router;

@@ -5,15 +5,6 @@ import { Outlet } from "react-router-dom";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  // =============== Tag active link
-  let menuBtn = document.querySelectorAll(".navlink");
-
-  menuBtn.forEach((li) => {
-    li.addEventListener("click", (e) => {
-      menuBtn.forEach((el) => el.classList.remove("activeCl"));
-      li.classList.add("activeCl");
-    });
-  });
 
   return (
     <>
@@ -30,7 +21,7 @@ export default function Navbar() {
             </button>
             <ul className="hidden md:flex md:items-center md:text-[20px] md:space-x-6">
               <Link to="/">
-                <li className="navlink activeCl" aria-current="page">
+                <li className="navlink" aria-current="page">
                   Home
                 </li>
               </Link>
