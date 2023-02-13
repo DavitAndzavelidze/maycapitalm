@@ -25,13 +25,20 @@ body {
 .mobImg {
   width: 100px;
 }
-.navlink {
+.navlink button {
   padding: 10px 20px;
   border-radius: 10px;
+  color: #333;
 }
-.navlink:hover {
+.navlink button:hover {
+  color: #333;
   background: #fff;
 }
+.nav-pills .nav-link.active {
+  background: #fff;
+  color: #333;
+}
+
 .productImg:hover {
   scale: 1.02;
 }
@@ -44,9 +51,6 @@ body {
 }
 .zPoz {
   z-index: 888;
-}
-.activeCl {
-  background: #fff;
 }
 .btn-fm:hover {
   color: #fff;

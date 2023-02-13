@@ -19,20 +19,74 @@ export default function Navbar() {
             <button>
               <FaBars color="white" className="md:hidden" />
             </button>
-            <ul className="hidden md:flex md:items-center md:text-[20px] md:space-x-6">
+            <ul
+              className="hidden md:flex md:items-center md:text-[20px] md:space-x-6 nav nav-pills"
+              id="pills-tab"
+              role="tablist"
+            >
               <Link to="/">
-                <li className="navlink" aria-current="page">
-                  Home
+                <li className="navlink nav-item" role="presentation">
+                  <button
+                    className="nav-link active"
+                    id="pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    Home
+                  </button>
                 </li>
               </Link>
               <Link to="/products">
-                <li className="navlink">Products</li>
+                <li className="navlink nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    Products
+                  </button>
+                </li>
               </Link>
               <Link to="/about">
-                <li className="navlink">About us</li>
+                <li className="navlink nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    About us
+                  </button>
+                </li>
               </Link>
               <Link to="/contact">
-                <li className="navlink">Contact</li>
+                <li className="navlink nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    Contact
+                  </button>
+                </li>
               </Link>
             </ul>
           </div>
@@ -67,7 +121,7 @@ export default function Navbar() {
         </div>
       </nav>
       <span className="absolute top-0 right-0 z-[100] md:block">
-        <h4 className="text-[18px] text-[#fff] pt-[1.6rem] pr-[1.6rem]">
+        <h4 className="text-[18px] text-[#fff] pt-[1.5rem] pr-[2rem]">
           May Capital Makine
         </h4>
       </span>
