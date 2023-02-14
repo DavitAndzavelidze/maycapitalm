@@ -52,7 +52,3 @@ body {
 .zPoz {
   z-index: 888;
 }
-.btn-fm:hover {
-  color: #fff;
-  background: orange;
-}

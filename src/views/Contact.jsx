@@ -1,4 +1,45 @@
+import { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const Result = () => {
+  return (
+    <span className="self-end text-[green] text-[14px]">
+      Your message sent successfully
+    </span>
+  );
+};
+
 export default function Contact() {
+  const form = useRef();
+
+  const [result, showResult] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_n7lbxxv",
+        "template_2d09obx",
+        form.current,
+        "8IaCGP6NCfLn3hkgN"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+          showResult(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  setTimeout(() => {
+    showResult(false);
+  }, 5000);
   return (
     <>
       <div className="flex flex-col mt-[8rem] mb-[4rem] items-center h-full">
@@ -24,11 +65,12 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="flex flex-col ml-[2rem] md:ml-[0px] gap-[10px] w-[300px] md:w-[500px]">
                 <div className="name">
                   <input
                     type="text"
+                    name="user_name"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Your Name"
                   />
@@ -36,6 +78,7 @@ export default function Contact() {
                 <div className="email">
                   <input
                     type="email"
+                    name="user_email"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Your Email"
                   />
@@ -43,6 +86,7 @@ export default function Contact() {
                 <div className="subject">
                   <input
                     type="text"
+                    name="subject"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Subject"
                   />
@@ -50,17 +94,14 @@ export default function Contact() {
                 <div className="textarea">
                   <textarea
                     className="w-full h-[150px] resize-none pl-[20px]"
+                    name="message"
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <div className="submit self-end">
-                  <button
-                    className="px-[40px] py-[10px] bg-orange-300 btn-fm"
-                    type="button"
-                  >
-                    Send
-                  </button>
+                <div className="submit self-end bg-orange-300 px-[40px] py-[10px] hover:bg-orange-400 hover:text-[#fff] cursor-pointer duration-[200ms]">
+                  <input type="submit" value="Send" />
                 </div>
+                <div className="self-end"> {result ? <Result /> : null} </div>
               </div>
             </form>
           </div>

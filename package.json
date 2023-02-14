@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.8",
     "@popperjs/core": "^2.11.6",
