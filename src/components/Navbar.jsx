@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -24,12 +26,10 @@ export default function Navbar() {
               id="pills-tab"
               role="tablist"
             >
-              <Link to="/">
+              <NavLink to="/" className={pathname === "/" ? "activeCl" : ""}>
                 <li className="navlink nav-item" role="presentation">
                   <button
-                    className="nav-link active"
                     id="pills-home-tab"
-                    data-bs-toggle="pill"
                     data-bs-target="#pills-home"
                     type="button"
                     role="tab"
@@ -39,13 +39,14 @@ export default function Navbar() {
                     Home
                   </button>
                 </li>
-              </Link>
-              <Link to="/products">
+              </NavLink>
+              <NavLink
+                to="/products"
+                className={pathname === "/products" ? "activeCl" : ""}
+              >
                 <li className="navlink nav-item" role="presentation">
                   <button
-                    className="nav-link"
                     id="pills-profile-tab"
-                    data-bs-toggle="pill"
                     data-bs-target="#pills-profile"
                     type="button"
                     role="tab"
@@ -55,13 +56,14 @@ export default function Navbar() {
                     Products
                   </button>
                 </li>
-              </Link>
-              <Link to="/about">
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={pathname === "/about" ? "activeCl" : ""}
+              >
                 <li className="navlink nav-item" role="presentation">
                   <button
-                    className="nav-link"
                     id="pills-profile-tab"
-                    data-bs-toggle="pill"
                     data-bs-target="#pills-profile"
                     type="button"
                     role="tab"
@@ -71,13 +73,14 @@ export default function Navbar() {
                     About us
                   </button>
                 </li>
-              </Link>
-              <Link to="/contact">
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={pathname === "/contact" ? "activeCl" : ""}
+              >
                 <li className="navlink nav-item" role="presentation">
                   <button
-                    className="nav-link"
                     id="pills-profile-tab"
-                    data-bs-toggle="pill"
                     data-bs-target="#pills-profile"
                     type="button"
                     role="tab"
@@ -87,7 +90,7 @@ export default function Navbar() {
                     Contact
                   </button>
                 </li>
-              </Link>
+              </NavLink>
             </ul>
           </div>
           <ul
@@ -104,18 +107,18 @@ export default function Navbar() {
               />
             </button>
             <div className="flex flex-col gap-[20px] md:flex mt-[84px] md:mt-[0px] mx-[4rem] text-white text-[15px] items-left h-screen md:h-full z-100">
-              <Link to="/">
+              <NavLink to="/">
                 <li className="navlinkm">Home</li>
-              </Link>
-              <Link to="/products">
+              </NavLink>
+              <NavLink to="/products">
                 <li className="navlinkm">Products</li>
-              </Link>
-              <Link to="/about">
+              </NavLink>
+              <NavLink to="/about">
                 <li className="navlinkm">About us</li>
-              </Link>
-              <Link to="/contact">
+              </NavLink>
+              <NavLink to="/contact">
                 <li className="navlinkm">Contact</li>
-              </Link>
+              </NavLink>
             </div>
           </ul>
         </div>

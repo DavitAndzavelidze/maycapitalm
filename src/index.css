@@ -30,13 +30,11 @@ body {
   border-radius: 10px;
   color: #333;
 }
-.navlink button:hover {
+
+.activeCl {
   color: #333;
   background: #fff;
-}
-.nav-pills .nav-link.active {
-  background: #fff;
-  color: #333;
+  border-radius: 6px;
 }
 
 .productImg:hover {
