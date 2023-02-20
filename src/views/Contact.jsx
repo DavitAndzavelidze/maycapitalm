@@ -39,7 +39,7 @@ export default function Contact() {
   };
   setTimeout(() => {
     showResult(false);
-  }, 5000);
+  }, 3000);
   return (
     <>
       <div className="flex flex-col mt-[8rem] mb-[4rem] items-center h-full">
@@ -73,6 +73,7 @@ export default function Contact() {
                     name="user_name"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div className="email">
@@ -81,6 +82,7 @@ export default function Contact() {
                     name="user_email"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Your Email"
+                    required
                   />
                 </div>
                 <div className="subject">
@@ -89,6 +91,7 @@ export default function Contact() {
                     name="subject"
                     className="form-input px-4 py-3 w-full"
                     placeholder="Subject"
+                    required
                   />
                 </div>
                 <div className="textarea">
@@ -98,8 +101,12 @@ export default function Contact() {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <div className="submit self-end bg-orange-300 px-[40px] py-[10px] hover:bg-orange-400 hover:text-[#fff] cursor-pointer duration-[200ms]">
-                  <input type="submit" value="Send" />
+                <div className="submit self-end bg-orange-300  hover:bg-orange-400 hover:text-[#fff] cursor-pointer duration-[200ms]">
+                  <input
+                    className="px-[40px] py-[10px]"
+                    type="submit"
+                    value="Send"
+                  />
                 </div>
                 <div className="self-end"> {result ? <Result /> : null} </div>
               </div>
